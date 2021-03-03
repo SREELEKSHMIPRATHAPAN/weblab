@@ -1,0 +1,40 @@
+<html>
+<head>
+<script language="javascript">
+function preload()
+{
+    topon=new Image(200,100);
+    topon.src="http://tkmce.ac.in/wp-content/themes/tkm/images/tkmce_logo.png"; 
+topoff=new Image(280,300);
+topoff.src="http://tkmce.ac.in/wp-content/uploads/2014/09/founder.png"; 
+}
+function myMouseOn(n)
+{
+    preload();
+    imageON=eval(n+"on.src");
+    document.images[n].src=imageON;
+}
+function myMouseOff(n)
+{
+    imageOFF=eval(n+"off.src");
+    document.images[n].src=imageOFF;
+}
+</script>
+<style>
+	h1{
+  background: pink;
+  border: none;
+  padding: 10pv;
+  color: blue;
+  font-family:verdana;
+}
+</style>
+</head>
+<body>
+<h1> Demo for mouse over</h1>
+<a href="#" onMouseOut="myMouseOff('top')"; onMouseOver="myMouseOn('top')";> 
+<img src="Koala.jpg" alt="Show Next" name="top"> 
+
+</a>
+</body>
+</html>

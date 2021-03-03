@@ -1,0 +1,125 @@
+<html> 
+    <head> 
+        <title>Validtion Form</title>
+        <script> 
+            function REGISTRATION() { 
+                var name =  
+                    document.forms["Reg"]["Name"]; 
+                var email =  
+                    document.forms["Reg"]["Mail"]; 
+                var phone =  
+                    document.forms["Reg"]["Telephone"]; 
+                 var cour=  
+                    document.forms["Reg"]["Sub"]; 
+                var password =  
+                    document.forms["Reg"]["Pass"]; 
+                var address =  
+                    document.forms["Reg"]["Addr"]; 
+  
+                if (name.value == "") 
+                { 
+                    window.alert("Please enter your name."); 
+                    name.focus(); 
+                    return false; 
+                } 
+  
+                if (address.value == "") 
+                { 
+                    window.alert("Please enter your address."); 
+                    address.focus(); 
+                    return false; 
+                } 
+                if (cour.selectedIndex < 1) 
+                { 
+                    alert("Please enter your course."); 
+                    cour.focus(); 
+                    return false
+                }
+                if (phone.value == "")
+                 { 
+                    window.alert( 
+                      "Please enter your contact number."); 
+                    phone.focus(); 
+                    return false; 
+                } 
+  
+                if (email.value == "") { 
+                    window.alert( 
+                      "Please enter a valid e-mail address."); 
+                    email.focus(); 
+                    return false; 
+                } 
+  
+                
+  
+                if (password.value == "") { 
+                    window.alert("Please enter your password"); 
+                    password.focus(); 
+                    return false; 
+                } 
+  
+                
+  
+                return true; 
+            } 
+        </script> 
+  
+        <style> 
+           
+            td
+            {
+                font-family: 'Times New Roman';
+            height: 75px;
+
+            }
+           
+    h1
+    {
+        font-family: verdana;
+        text-align: center;
+        color: rgb(0, 54, 155);
+    }
+
+        </style> 
+    </head> 
+  
+    <body class="bg"> 
+        <h1>REGISTRATION FORM</h1>
+        <center> 
+
+        <form name="Reg" action="" 
+              onsubmit="return REGISTRATION()">
+              <table>
+               
+            <input type="hidden" name="hide" value="h">
+<tr><td>Fullname</td>
+    <td><input type="text" name="Name"></td></tr>
+<tr><td>Permanant Address</td>
+    <td><textarea name="Addr"></textarea></td></tr>
+
+<tr><td>Select the Course</td>
+    <td><select type="text" name="Sub">
+<option>--Select--</option>
+<option value="mca">MCA</option>
+<option value="mtech">MTECH</option>
+<option value="msc">MSC</option>
+<option value="mba">MBA</option>
+
+</select></td></tr> 
+
+<tr><td>Contactnumber</td>
+    <td><input type="text" name="Telephone"></td></tr>
+<tr>
+    <tr><td>Email Id</td>
+    <td><input type="email" name="Mail"></td></tr>
+<tr>
+    <tr><td>Password</td>
+    <td><input type="password" name="Pass"></td></tr>
+<tr><td></td>
+
+    <td><input type="submit" value="REGISTER"></td></tr>
+ 
+            </table> 
+        </form> 
+    </body> 
+</html> 

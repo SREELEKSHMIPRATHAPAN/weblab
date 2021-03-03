@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Exam</title>
+<script language="javascript">
+
+function exam(form)
+{
+var i=0;
+if(form.one[0].checked)
+i=i+1;
+if(form.three[1].checked)
+i=i+1;
+if(form.four[0].checked)
+i=i+1;
+if(form.five[1].checked)
+i=i+1;
+window.alert("Thank You Taking Online Exam!Your Score is:"+i);
+}
+</script>
+
+<style>
+input[type=submit]:hover
+ {
+  background-color: yellow;
+}
+input[type=reset]:hover
+{
+
+  background: pink;
+}
+</style>
+
+</head>
+<body bgcolor=##34eb95>
+<form onSubmit="exam(this)">
+<center><h1><blink>WELCOME TO ONLINE EXAM FORM</blink></h1></center>
+<p>
+<h1>1)Is Javascript a case-sensitive language?</h1>
+<input type="radio"name="one"value="true">
+<label>True</label>
+<input type="radio"name="one"value="false">
+<label>False</label>
+</p>
+<p>
+<h1>2)Which of the following type of variable is visible only within a function where it is defined?</h1>
+<input type="radio"name="three"value="global">
+<label>global variable</label>
+<input type="radio"name="three"value="local">
+<label>local variable</label>
+<input type="radio"name="three"value="both">
+<label>Both of the above</label>
+<input type="radio"name="three"value="none">
+<label>None of the above</label>
+</p>
+<p>
+<h1>3)Frame package is in which package</h1>
+<input type="radio"name="four"value="awt">
+<label>AWT</label>
+<input type="radio"name="four"value="applet">
+<label>Applet</label>
+<input type="radio"name="four"value="lang">
+<label>Lang</label>
+<input type="radio"name="four"value="swing">
+<label>Swing</label>
+</p>
+<p>
+
+<h1>4)Java does not support</h1>
+<input type="radio"name="five"value="inheritance">
+<label>Inheritance</label>
+<input type="radio"name="five"value="multiple inheritance">
+<label>Multiple inheritance</label>
+<input type="radio"name="five"value="polymorphism">
+<label>Polymorphism</label>
+<input type="radio"name="five"value="encryption">
+<label>Encryption</label>
+</p>
+<p><center>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</center></p>
+</body>
+</html>
